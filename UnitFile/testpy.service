@@ -1,0 +1,4 @@
+[Unit]
+Description='this is my python file'
+[Service]
+ExecStart=/usr/bin/python3 /home/knoldus/testpy.py
