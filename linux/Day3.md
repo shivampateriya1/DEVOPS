@@ -24,3 +24,8 @@ sol - Flush removes all the rule in iptables from all chains. we can also use fl
    Daemon process : They are system-related background processes that often run with the permissions of root and services requests from other processes, they most      of the time run in the background and wait for processes it can work along with for ex print daemon. 
    When ps –ef is executed, the process with ? in the tty field are daemon processes.
       ref : https://www.geeksforgeeks.org/processes-in-linuxunix/
+
+# How to create symbolic links ?
+  sol-> ln is a command-line utility for creating links between files. By default, the ln command creates hard links. To create a symbolic link,
+  use the -s (--symbolic) option.
+ ###### syntax :ln -s source_file symbolic_link
