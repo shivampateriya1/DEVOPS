@@ -23,6 +23,31 @@ sol – We use touch command to create file and we can also create multipple fil
 # Q6.Where are unit files located?
 Sol – unit file are located in etc dir etc/systemd/system.
 
+#Q7.Create systemd file ?
+sol.frist we need to write a script which can be in python shell etc.
+then we have go to etc/systemd/system 
+then create unit file using .service extension
+Unit]
+Description=<description about this service>
+
+[Service]
+User=<user e.g. root>
+WorkingDirectory=<directory_of_script e.g. /root>
+ExecStart=<Unit]
+Description=<description about this service>
+
+[Service]
+User=<user e.g. root>
+WorkingDirectory=<directory_of_script e.g. /root>
+ExecStart=<script which needs to be executed>
+Restart=always
+
+[Install]
+WantedBy=multi-user.targe>
+Restart=always
+
+[Install]
+WantedBy=multi-user.targe
 
 
 
