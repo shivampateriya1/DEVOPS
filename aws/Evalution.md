@@ -20,3 +20,6 @@ An Elastic IP address is a public IPv4 address, which is reachable from the inte
   rm
   The following rm command deletes a single s3 object:
   aws s3 rm s3://mybucket/test2.txt
+
+## What does SCP use?
+  The SCP is a network protocol, based on the BSD RCP protocol, which supports file transfers between hosts on a network. SCP uses Secure Shell (SSH) for data         transfer and uses the same mechanisms for authentication, thereby ensuring the authenticity and confidentiality of the data in transit.
