@@ -29,3 +29,20 @@ An action is a custom application for the GitHub Actions platform that performs 
 ### **Runners:**
 
 A runner is a server that runs your workflows when they're triggered. Each runner can run a single job at a time. GitHub provides Ubuntu Linux, Microsoft Windows, and macOS runners to run your workflows; each workflow run executes in a fresh, newly-provisioned virtual machine. If you need a different operating system or require a specific hardware configuration, you can host your own runners.
+
+
+### Understanding the workflow file
+
+name:      ------>  Name of the workflow and it wil be show in action tan of git hub repo
+
+on :   -------->  It will trigger the workflow. It use the events, so a workflow. run every time that event occurs like [push,pull,merge]. we can specific branches ,path or tags .
+
+jobs : ------>  Defines a job named [like : build ] The child keys will define properties of the job.
+
+runs-on :ubuntu-latest   ----> Configures the job to run on the latest version of an Ubuntu Linux runner. This means that the job will execute on a fresh virtual machine hosted by GitHub. you can use linux,wndow,mac os
+
+Steps: ----->  Groups together all the steps that run like [build ]job. Each item nested under this section is a separate action or shell script.
+
+Uses: actions/setup-node@v2  ----- > The uses keyword specifies that this step will run v2 of the actions/checkout action. This is an action that checks out your repository onto the runner, allowing you to run scripts or other actions against your code (such as build and test tools). You should use the checkout action any time your workflow will run against the repository's code.
+
+-run  --->  The run keyword tells the job to execute a command on the runner.
